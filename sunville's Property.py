@@ -940,7 +940,7 @@ def insights():
         z=df1[['ADVANCE_AMOUNT']]
         plt.plot(x,y,'ro-',color="#0066ff")
         #plt.legend(loc='upper left')
-        plt.plot(x,z,'ro-')
+        #plt.plot(x,z,'ro-')
         #plt.legend(loc='upper right')
         plt.xticks(rotation=90,fontsize=10)
         plt.yticks(fontsize=10)
@@ -953,6 +953,21 @@ def insights():
         plt.title("Time Series",fontsize=30)
         plt.show()
         #plt.legend(loc='center')
+    def graph8():
+        df = pd.read_csv("C:\\Users\\Mohit\\Downloads\\company_sales_data.csv")
+        profitList = df ['total_profit'].tolist()
+        monthList  = df ['month_number'].tolist()
+        plt.plot(monthList, profitList, label = 'Profit data of last year', 
+        color='r', marker='o', markerfacecolor='k', 
+        linestyle='-', linewidth=3)
+      
+        plt.xlabel('Month Number',fontsize=15)
+        plt.ylabel('Profit amount',fontsize=15)
+        plt.legend(loc='lower right',fontsize=14)
+        plt.title('Company Sales data of last year',fontsize=30)
+        plt.xticks(monthList,fontsize=14)
+        plt.yticks([100000, 200000, 300000, 400000, 500000],fontsize=14)
+        plt.show()
         
        
     sl=Button(root,text="Graph for Sold Vs Leased",bg="yellow",fg="black",command=graph1).place(x=10,y=20)   
@@ -962,6 +977,7 @@ def insights():
     bp=Button(root,text="Best Performer",bg="yellow",fg="black",command=graph5).place(x=10,y=180)    
     area=Button(root,text="Area sold for July month",bg="yellow",fg="black",command=graph6).place(x=10,y=220)     
     tsa=Button(root,text="Time series Analysis",bg="yellow",fg="black",command=graph7).place(x=10,y=260)      
+    ip=Button(root,text="Interesting Patterns for bussiness decision",bg="yellow",fg="black",command=graph8).place(x=10,y=300)
     root.mainloop()
 def confirm_new_password():
     global password1_verify,password2_verify
