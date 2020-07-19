@@ -1,2 +1,3 @@
 "# SunVille-Properties" 
 Sunville Properties is a Colorado based property consultants who have appointed their agesnts across Major Cities across the globe.They have sub-Coompanies which take care the buiness in different countries and are placed in the countries from where they operate from. The Company currently has been using multiple forms of data storage and want to streamline their working using an application ,which can help them seamlessly navigate via different forms of storage. Also the company seeks some insights into the current data and also going further in future. So it has requested specific modules to be introduced in the system.
+reference for some matplotlib graphs are:- https://pynative.com/python-matplotlib-exercise/
